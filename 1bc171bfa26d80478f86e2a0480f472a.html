@@ -1,0 +1,703 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title> </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-default_background {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-transparentGray { background-color: undefined; }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head>
+
+<body>
+	
+<article id="1bc171bf-a26d-8047-8f86-e2a0480f472a" class="page sans"><header><h1 class="page-title"> </h1><p class="page-description"></p></header><div class="page-body"><h1 id="1bc171bf-a26d-812e-bcf5-d2cefe7d5056" class="block-color-gray"><em><mark class="highlight-gray">EDUCATION</mark></em></h1><hr id="1bc171bf-a26d-813e-a5dd-f8b05a66847e"/><p id="1bc171bf-a26d-8168-9dd9-d01c5d72f76a" class=""><div class="indented"><p id="1bc171bf-a26d-81f2-a7e1-dc8ce266c1a0" class=""><strong>Ternopil Trade-Union of Arts ( 2005 - 2011 )</strong><div class="indented"><p id="1bc171bf-a26d-81e4-b27b-f67280936e75" class="">Visual Arts </p><p id="1bc171bf-a26d-81c0-8517-fc3a475ba4f1" class="">
+</p></div></p><p id="1bc171bf-a26d-81c9-aaa6-d8e459209529" class=""><strong>Kyiv National University of Culture and Arts (</strong> <strong>2011</strong> <strong>-</strong> <strong>2015</strong> <strong>)</strong><div class="indented"><p id="1bc171bf-a26d-81dc-8bca-f5eed4e2c6ee" class="">Bachelor of Graphic Design</p><p id="1bc171bf-a26d-81cb-b161-c906fdba06c9" class="">
+</p></div></p><p id="1bc171bf-a26d-8183-a852-fbbcc251f30b" class=""><strong>Devtodev Courses (</strong> <strong>2020</strong> <strong>-</strong> <strong>2021</strong> <strong>)</strong><div class="indented"><p id="1bc171bf-a26d-81c6-8f57-d9d3687569c6" class="">Game Design<br/>Game Design Documentation<br/>Indie Game Development<br/></p><p id="1bc171bf-a26d-81a7-8757-ebe142e9d6d5" class="">
+</p></div></p><p id="1bc171bf-a26d-8160-8494-e6d565b35f40" class=""><strong>West Ukraine National University ( 2024 -</strong> <strong>…</strong> <strong>)</strong><div class="indented"><p id="1bc171bf-a26d-81d9-a423-e9b47cfa59ad" class="">Master of Management</p><p id="1bc171bf-a26d-80c7-afeb-cd43935dc39e" class="">
+</p></div></p></div></p><h1 id="1bc171bf-a26d-81f1-b523-f417403f1391" class=""><em><mark class="highlight-gray">EXPERIENCE</mark></em></h1><hr id="1bc171bf-a26d-81b5-ba1f-d172cb17bb50"/><p id="1bc171bf-a26d-8190-8027-eb26d6874fa9" class=""><div class="indented"><p id="1bc171bf-a26d-818f-8020-c9f98df66c6e" class=""><strong>Developer - Provision Ent. (</strong> <strong>2019</strong> <strong>-</strong> <strong>…</strong> <strong>)</strong><div class="indented"><p id="1bc171bf-a26d-81c5-ba49-f1e41ee044ca" class=""><strong>CampMarket<br/><br/></strong>PC, PS, Xbox, Nintendo Switch<br/>auto battler, grand strategy, tycoon, base building, 4X, god game<br/><div class="indented"><p id="1bc171bf-a26d-8176-a657-c5563d973411" class=""><em>TBA</em></p></div></p><p id="1bc171bf-a26d-8107-b9aa-e7cda5848f7c" class=""><strong>Lichen Forest<br/><br/></strong>PC, PS, Xbox, Nintendo Switch<br/>immersive sim, evolution, survival, base building, colony sim, god game<br/><div class="indented"><p id="1bc171bf-a26d-8112-b6b1-e490e7e02889" class=""><em>TBA</em></p><p id="1bc171bf-a26d-81b8-a3d7-e845ec924494" class="">
+</p></div></p></div></p><p id="1bc171bf-a26d-81f3-90a2-e84435da11e4" class=""><strong>Event Manager - Ternopil Gamedev (</strong> <strong>2018</strong> <strong>-</strong> <strong>2021</strong> <strong>)</strong><div class="indented"><p id="1bc171bf-a26d-81a8-994f-d52b1fb3cea9" class=""><strong>Local Gamedev Community</strong><div class="indented"><p id="1bc171bf-a26d-816a-a595-fc8e9dd83944" class=""><em>Meetup, Game Jam events</em></p></div></p><p id="1bc171bf-a26d-812c-91b1-e28a8cbb2ee6" class="">
+</p></div></p><p id="1bc171bf-a26d-8167-b6a0-fa9aecb59f4a" class=""><strong>UI/UX Design - Mikiri Games (</strong> <strong>2021</strong> <strong>)</strong><div class="indented"><p id="1bc171bf-a26d-81b9-9cfe-e68b7d3799ec" class=""><strong>Soul Forge</strong><br/>Mobile<br/>deck building, roguelite<br/><div class="indented"><p id="1bc171bf-a26d-8185-a2d8-eb419496de4a" class=""><em>UI/UX improvement. Internship</em></p></div></p><p id="1bc171bf-a26d-810d-b101-e680980477d8" class="">
+</p></div></p><p id="1bc171bf-a26d-81d0-a09f-e17a28aa7716" class=""><strong>Game/Level Design - Hook Games (</strong> <strong>2020</strong> <strong>)</strong><div class="indented"><p id="1bc171bf-a26d-8160-93ed-f774348b9909" class=""><strong>Space Me Out</strong><br/>PC, Nintendo<br/>platformer, combat, roguelite<br/><div class="indented"><p id="1bc171bf-a26d-8118-b141-fd58c6aca559" class=""><em>Combat and movement system<br/>Level, enemy progression<br/></em></p></div></p><p id="1bc171bf-a26d-8151-a633-e647952db2c5" class="">
+</p></div></p><p id="1bc171bf-a26d-81e1-9774-ca9193ddf27b" class=""><strong>Tester - Andriy Bychkovskyi (</strong> <strong>2020</strong> <strong>)</strong><div class="indented"><p id="1bc171bf-a26d-811d-b0ca-f180f70422ad" class=""><strong>Farlanders: Prologue </strong><br/>PC<br/>colony sim, base building, resource management<br/><div class="indented"><p id="1bc171bf-a26d-81ec-908a-f6dbb593caa8" class=""><em>Alpha build testing, feedback and suggestion</em></p></div></p><p id="1bc171bf-a26d-813f-ac25-c2dc13a5b08d" class="">
+</p></div></p><p id="1bc171bf-a26d-81ca-b67f-db2de71b2f2c" class=""><strong>Teacher - IT House (</strong> <strong>2017</strong> <strong>-</strong> <strong>2018</strong> <strong>)</strong><div class="indented"><p id="1bc171bf-a26d-815f-b0ed-fd7d3ebce424" class=""><strong>GAMECRAFT</strong><div class="indented"><p id="1bc171bf-a26d-8165-a235-cdf0c26897c5" class=""><em>Game Design course for</em> <em>children (</em> <em>11-15</em> <em>y.o.</em> <em>). 2D</em> <em>platformer</em> <em>project</em></p><p id="1bc171bf-a26d-800f-a982-f5a11e58ef72" class="">
+</p></div></p></div></p></div></p><h1 id="1bc171bf-a26d-8151-8582-ef37ebb93823" class=""><em><mark class="highlight-gray">SKILL</mark></em></h1><hr id="1bc171bf-a26d-817e-bb28-e4b9c3d51645"/><p id="1bc171bf-a26d-81ca-b477-dd8f3794a18e" class=""><div class="indented"><p id="1bc171bf-a26d-8146-a8e4-f4285d2139f3" class=""><strong>Design</strong><div class="indented"><ul id="1bc171bf-a26d-81ba-a8d6-de99a0b93f92" class="bulleted-list"><li style="list-style-type:disc">Hierarchy</li></ul><ul id="1bc171bf-a26d-811f-b3b5-efe167d15dbe" class="bulleted-list"><li style="list-style-type:disc">Layout</li></ul><ul id="1bc171bf-a26d-817d-ae9e-c1cbc4a03dd0" class="bulleted-list"><li style="list-style-type:disc">Wireframe</li></ul><ul id="1bc171bf-a26d-811a-bd76-da9b9efb1d13" class="bulleted-list"><li style="list-style-type:disc">UI/UX</li></ul><ul id="1bc171bf-a26d-8123-bd1f-e184f9d38133" class="bulleted-list"><li style="list-style-type:disc">Typography</li></ul><ul id="1bc171bf-a26d-814e-9836-d1397652ab05" class="bulleted-list"><li style="list-style-type:disc">Design System</li></ul><p id="1bc171bf-a26d-8156-af39-d492d668b3d1" class="">
+</p></div></p><p id="1bc171bf-a26d-8120-87b0-dcb0148f326f" class=""><strong>Development</strong><div class="indented"><ul id="1bc171bf-a26d-8111-90f2-ee0086f3ec15" class="bulleted-list"><li style="list-style-type:disc">HTML, CSS</li></ul><ul id="1bc171bf-a26d-81e9-b015-f510d4603f8f" class="bulleted-list"><li style="list-style-type:disc">JS</li></ul><ul id="1bc171bf-a26d-8185-87a6-f60608e26091" class="bulleted-list"><li style="list-style-type:disc">Vite</li></ul><ul id="1bc171bf-a26d-8103-a5d4-c2aceaadab41" class="bulleted-list"><li style="list-style-type:disc">Svelte</li></ul><ul id="1bc171bf-a26d-816c-897f-cfc3b7f82fea" class="bulleted-list"><li style="list-style-type:disc">Tilewind</li></ul></div></p><p id="1bc171bf-a26d-81fb-a14e-cc82664283a7" class="">
+</p></div></p><h1 id="1bc171bf-a26d-814a-bdb8-c5ae4a05cc6e" class=""><em><mark class="highlight-gray">TOOL</mark></em></h1><hr id="1bc171bf-a26d-81ee-9621-f9c295273872"/><p id="1bc171bf-a26d-816e-b350-d5981d7ba8e6" class=""><div class="indented"><p id="1bc171bf-a26d-8153-83fa-c31b7d0e81ee" class=""><strong>Engine</strong><div class="indented"><ul id="1bc171bf-a26d-8199-af4e-e551dc3f48e2" class="bulleted-list"><li style="list-style-type:disc">Unreal </li></ul><ul id="1bc171bf-a26d-811e-9402-f15c606c242d" class="bulleted-list"><li style="list-style-type:disc">Unity</li></ul><ul id="1bc171bf-a26d-81c1-b399-ce4d9a6d19dd" class="bulleted-list"><li style="list-style-type:disc">Blender</li></ul></div></p></div></p><p id="1bc171bf-a26d-817f-8722-cfa27f74802e" class=""><div class="indented"><p id="1bc171bf-a26d-81a3-b4de-e0607d23308e" class=""><strong>2D</strong><div class="indented"><ul id="1bc171bf-a26d-8140-85c1-c39e69c5d0f7" class="bulleted-list"><li style="list-style-type:disc">Figma</li></ul><ul id="1bc171bf-a26d-81f6-b890-c9edd7867efd" class="bulleted-list"><li style="list-style-type:disc">Photoshop</li></ul><ul id="1bc171bf-a26d-81eb-a672-f6b1bda97691" class="bulleted-list"><li style="list-style-type:disc">Illustrator</li></ul></div></p></div></p><p id="1bc171bf-a26d-80b2-860a-c88c1c23ba51" class=""><div class="indented"><p id="1bc171bf-a26d-81f2-b387-d55bfa051c4d" class=""><strong>Code</strong><div class="indented"><ul id="1bc171bf-a26d-8188-ad7f-ffca7692752b" class="bulleted-list"><li style="list-style-type:disc">Visual Studio</li></ul><ul id="1bc171bf-a26d-8112-a600-f942b017f1f4" class="bulleted-list"><li style="list-style-type:disc">VS Code</li></ul><ul id="1bc171bf-a26d-8170-a983-e70cf4168d34" class="bulleted-list"><li style="list-style-type:disc">Git</li></ul><p id="1bc171bf-a26d-80a6-8435-f1992eae6560" class="">
+</p></div></p></div></p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span>
+
+</body></html>
