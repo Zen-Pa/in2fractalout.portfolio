@@ -38,8 +38,8 @@
           
           --background-color: lightcoral;
         
-          --dark-color: rgb(50, 55, 47);
-          --second-dark-color: rgb(55, 53, 47);
+          --dark-color: rgb(41, 50, 59);
+          --second-dark-color: var(--dark-color);
           
               --light-color: rgb(255, 248, 220);
           /* --second-light-color: rgba(255, 248, 220, 0.349); */
@@ -79,6 +79,57 @@
             border-bottom: .4rem solid var(--dark-color);
           }
         }
+
+        @keyframes animate-in-and-out {
+          entry 0%  {
+            /* opacity: 0; transform: translateY(100%); */
+            transform: translateY(1000px) scaleY(2.5) scaleX(0.2);
+            /* transform-origin: 50% 100%;  */
+            /* filter: blur(8px);  */
+            opacity: 0;
+          }
+          entry 100%  {
+            /* opacity: 1; transform: translateY(0); */
+            transform: translateY(0) scaleY(1) scaleX(1);
+            /* transform-origin: 50% 50%;  */
+            filter: blur(0);
+            opacity: 1;
+          }
+          /* exit 0% {
+            opacity: 1; transform: translateY(0);
+          }
+          exit 100% {
+            opacity: 0; transform: translateY(-100%);
+          } */
+        }
+
+        .slide-in-left {
+          animation: slide-in-left 0.6s ease-out 0.2s both;
+        }
+        @keyframes slide-in-left {
+          0% {
+            transform: translateX(-100px);
+            opacity: 0;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+
+        figure img {
+          animation: linear slide-in-left;
+          animation-timeline: view();
+          animation-range: entry 0% cover 20%;
+        }
+
+        h3, p, li, blockquote {
+          animation: linear slide-in-left;
+          animation-timeline: view();
+          animation-range: entry 0% cover 10%;
+        }
+
         
         body {
           line-height: 1.5;
@@ -228,10 +279,28 @@
           /* padding: 1rem 0 !important; */
         }
 
-        figure, img {
+        @keyframes appear {
+          from {
+            opacity: 0;
+            clip-path: inset(100% 100% 0 0);
+          }
+          to {
+            opacity: 1;
+            clip-path: inset(0 0 0 0);
+          }
+        }
+        figure img {
+          /* animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both; */
+
+
+          /* animation: appear linear;
+          animation-timeline: view();
+          animation-range: entry 0% cover 40%; */
+          
           /* border: .2rem dashed var(--dark-color); */
           /* border-left: .2rem dashed var(--dark-color);
           border-right: .2rem dashed var(--dark-color); */
+          
         }
         
         figcaption {
@@ -357,6 +426,9 @@
           margin-block-end: 0.6em;
         }
         
+        strong {
+          font-weight: 900;
+        }
         ul strong {
           font-weight: 700;
         }
@@ -674,7 +746,7 @@
         .pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
         .pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
         .highlight-default {
-          color: rgba(55, 53, 47, 1);
+          color: var(--dark-color);
         }
         .highlight-gray {
           color: var(--second-light-color) !important;
@@ -860,7 +932,10 @@
                 ZEN<mark class="highlight-gray" style="color: var(--hero-header-color) !important;">DRAN</mark> PA<mark
                   class="highlight-gray" style="color: var(--hero-header-color) !important;">VLO</mark></h1> -->
                      
-                                      <p># </p>
+                                      <p>
+                                        <!-- #  -->
+                                        <br><i>Am looking for a job in a field of Interaction Design</i>
+                                      </p>
                                       
                                       <h3 id="-education-" class="cv-header">EDUCATION</h3>
 
@@ -899,8 +974,8 @@
                                         </p>
 
                                         <p><strong>Event Manager - Ternopil Gamedev ( 2018 - 2021 )</strong>
-                                          <br>    <em>Meetup, Game Jam events</em>
-                                          <br>  <strong>Local Gamedev Community</strong>
+                                          <br>    <em>Local Gamedev Community. Meetup, Game Jam events</em>
+                                          <!-- <br>  <strong>Meetup, Game Jam events</strong> -->
                                         </p>
                                         
                                         <p><strong>UI/UX Design - Mikiri Games ( 2021 )</strong>
@@ -1000,9 +1075,10 @@
                                       
 
 
-          <p id="1bb171bf-a26d-812d-8664-fcf39bf7b598" class=""
-            style="margin-left: 0; padding-left: 1.39rem; background-color: var(--dark-color);"><em><mark
-                style="color: cornsilk; font-weight: 400;">UX/UI • Design • Typography</mark></em></p>
+          <!-- <p id="1bb171bf-a26d-812d-8664-fcf39bf7b598" class=""
+            style="margin-left: 0; padding-left: 1.39rem; background-color: var(--dark-color);"><i><mark
+                style="color: cornsilk; font-weight: 400;">UX/UI • Design • Typography</mark></em></p> -->
+                <div style="background-color: var(--dark-color);"><br><br><br><br><br><br><br><br></div>
           </div>
           <h1 id="1bb171bf-a26d-814a-b7c7-facc188e8238" class=""><mark class="highlight-default">TYPOGRAPHY</mark></h1>
           <h3 id="1bb171bf-a26d-8124-a8d5-dc6ad9c51f04" class="block-color-yellow">Game Title
