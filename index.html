@@ -25,7 +25,8 @@
           --background-second-color: wheat;
 
           --unit-size: 5.8rem;
-          --villain-size: 5rem;
+                          --villain-size: 5rem;
+            --unit-brightness-b: 0.24;
           
           --margin-hero: 2rem;
           --margin-s: 1.6rem;
@@ -84,6 +85,30 @@
             border-bottom: .4rem solid var(--dark-color);
           }
         }
+
+        .unit-white {
+          filter: sepia(0.3) brightness(1.17);
+          /* filter: brightness(1.2); */
+          /* filter: saturate(80%); */
+        }
+        .unit-black {
+          filter: brightness(var(--unit-brightness-b));
+        }
+        .villain-white {
+          filter: sepia(0.8) brightness(1.06);
+        }
+        .villain-black {
+          filter: brightness(calc(var(--unit-brightness-b) + .08));
+        }
+        .animated-slower{
+          animation: play-speed 2s steps(10) infinite;
+        }
+
+        @keyframes play-speed {
+          from { background-position: 0 0; }
+          to { background-position: -1000px 0; } /* Adjust based on frame width */
+        }
+
 
         @keyframes animate-in-and-out {
           entry 0%  {
@@ -933,16 +958,28 @@
                   ZEN<mark class="highlight-gray" style="color: var(--hero-second-header-color) !important;">DRAN</mark> PA<mark
                     class="highlight-gray" style="color: var(--hero-second-header-color) !important;">VLO</mark></h1>
 
-                  <div class="units-container" style="display: flex; justify-content: space-evenly; height: var(--unit-size); position: relative; bottom: var(--unit-size);">
-                    <img src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(1.2);">
-                    <img src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(.6);">
-                    <img src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(1.2);">
-                    <img src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(.6);">
-                    <img src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(1.2);">
-                    <img src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(.6);">
-                    <img src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(1.2);">
-                    <img src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(.6);">
-                  </div>
+                    <!-- <div style="width: 100%;"> -->
+                      <div style="
+                                height: var(--unit-size); 
+                                width: var(--unit-size);
+                                display: flex; 
+                                justify-content: space-evenly; 
+                                position: relative; 
+                                bottom: var(--unit-size);
+
+                                margin-left: var(--margin-s);
+                                ">
+
+                      <img class="unit-white" src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                      <img class="unit-black" src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                      <img class="unit-white" src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                      <img class="unit-black" src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                      <img class="unit-white" src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                      <img class="unit-black" src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                      <img class="unit-white" src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                      <img class="unit-black" src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                    </div>
+                  <!-- </div> -->
 
 
               <!-- <h1 id="1bb171bf-a26d-8105-9840-ee80ee8975ba" class="hero-header" style="color: var(--hero-second-header-color)">
@@ -952,7 +989,7 @@
                                     
                                       <p style="line-height: 1.5em;">
                                         <!-- #  -->
-                                        <br>
+                                        <!-- <br>  -->
                                           <!-- Frontend solution: Design & Development. -->
 
                                           <!-- <i>Bachelor of Graphic Design. Main field occupation - Gamedev 
@@ -1268,10 +1305,23 @@
                     src="/assets/Popup1-Cycles2-BanOevoM.png" /></a></figure>
               <figure id="1bb171bf-a26d-8118-b003-d9a5639bfec9" class="image"><a href="Popup2-Cycles-Cropped.png"><img
                     style="width:384px" src="/assets/Popup2-Cycles-Cropped-7cC6QeB7.png" /></a></figure>
+
+
+                    <!-- margin-bottom: calc(var(--margin-vertical-l) *1.2) !important; -->
               <figure id="1bb171bf-a26d-81bd-9f94-f927338152ee" class="image"
-                                                                style="margin-bottom: calc(var(--margin-vertical-l) *1.2) !important;"
-                                                                ><a href="Popup2-Cycles-Color1-Ps2-Cropped.png"><img
-                    style="width:384px;" src="/assets/Popup2-Cycles-Color1-Ps2-Cropped-DFojryoG.png" /></a></figure>
+                    style="
+                            margin-bottom: 0 !important;
+                            position: relative;
+                            z-index: 3;
+                            background-color: rgba(247, 228, 189, 1);
+                            "
+                    ><a href="Popup2-Cycles-Color1-Ps2-Cropped.png">
+                  <img
+                    style="width:384px;
+                           
+                          " 
+                          src="/assets/Popup2-Cycles-Color1-Ps2-Cropped-DFojryoG.png" /></a>
+              </figure>
 
 
 
@@ -1289,35 +1339,191 @@
                                                                                       
                                                                                       ">
 
-                          <img src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(1.2);">
-                          <img src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(.6);">
-                          <img src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(1.2);">
-                          <img src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(.6);">
-                          <img src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(1.2);">
-                          <img src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(.6);">
-                          <img src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(1.2);">
-                          <img src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(.6);">
+                          <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                          <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                          <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                          <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                          <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                          <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                          <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                          <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
                         </div> -->
 
 
+                    <div style="height: 45rem; 
+                                overflow: hidden;
+                                position: relative;
+                                
+                                ">
+                                <!-- bottom: 50rem; -->
+                      <img class="animated-slower villain-black" src="/assets/villain-grey-slow461ms-ezgif.com-gif-to-webp-converter.webp" alt=""
+                         style="
+                            filter: brightness(.32) sepia(1.8) contrast(1.84) hue-rotate(180deg) invert(100%);
 
-                    <div style="background-color: var(--dark-color); padding: 4rem;"></div>
+                            position: relative; 
+                            bottom: 18rem;
+                            right: 14.4rem;
+                            z-index: 2;
 
-                    <!-- position: relative; bottom: .3rem;  -->
+                            scale: 1.4;
+                            
+
+
+
+                            ">
+                    </div>
+
+
+
+
+
+                    
+
+                    <div style="position: relative; z-index: 1; background-color: var(--dark-color); padding: 4rem;"></div>
+
+
                     <div class="units-container" style="display: flex; justify-content: space-around;
-                                        height: calc(var(--unit-size) *2);
+                                        height: calc(var(--unit-size) *1);
+                                        background-color: var(--dark-color);
+                                        border-bottom: .24rem solid var(--background-color);">                   
+
+                        <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                        <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">                                                                                                          
+                        <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                        <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">                                                                                                                                                                                                          
+                    </div>
+                    
+                    <!-- <div class="units-container" style="display: flex; justify-content: space-around;
+                                        height: calc(var(--unit-size) *1);
+                                        background-color: var(--dark-color);
+                                        border-bottom: 0rem solid var(--background-color);">                   
+
+                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">                                                                                                                                                                                                          
+                        <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                        <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">                                                                                                          
+                        <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                        <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                    </div> -->
+
+                    <!-- <div class="units-container" style="display: flex; justify-content: space-around;
+                                        height: calc(var(--unit-size) *1);
+                                        background-color: var(--dark-color);
+                                        border-bottom: 0rem solid var(--background-color);">               
+                                        
+                        <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">                                                                                                        
+                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(calc(var(--unit-brightness-b) + .01))
+                                                                                                                                        sepia(80%) hue-rotate(180deg) contrast(1.05);">
+                        <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(calc(var(--unit-brightness-b) + .01))
+                                                                                                                                        sepia(80%) hue-rotate(180deg) contrast(1.05);">                                                                                                          
+                        <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(calc(var(--unit-brightness-b) + .01))
+                                                                                                                                        sepia(80%) hue-rotate(180deg) contrast(1.05);">
+
+                        <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(calc(var(--unit-brightness-b) + .01))
+                                                                                                                                        sepia(80%) hue-rotate(180deg) contrast(1.05);">                                                                                                          
+                    </div> -->
+
+                    <!-- <div class="units-container" style="display: flex; justify-content: space-around;
+                                        height: calc(var(--unit-size) *1);
+                                        background-color: var(--dark-color);
+                                        border-bottom: 0rem solid var(--background-color);">                   
+
+                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(calc(var(--unit-brightness-b) + .01))
+                                                                                                                                        sepia(80%) hue-rotate(180deg) contrast(1.05);">
+                        <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(calc(var(--unit-brightness-b) + .01))
+                                                                                                                                        sepia(80%) hue-rotate(180deg) contrast(1.05);">                                                                                                          
+                        <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(calc(var(--unit-brightness-b) + .01))
+                                                                                                                                        sepia(80%) hue-rotate(180deg) contrast(1.05);">
+
+                        <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(calc(var(--unit-brightness-b) + .01))
+                                                                                                                                        sepia(80%) hue-rotate(180deg) contrast(1.05);">                                                                                                          
+                        <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">                                                                                                        
+                    </div> -->
+
+
+                    <!-- <div class="units-container" style="display: flex; justify-content: space-around;
+                                                        height: calc(var(--unit-size) *1);
+                                                        background-color: var(--dark-color);
+                                                        border-bottom: 0rem solid var(--background-color);">                   
+
+                            <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: none;">                                                                                                                                                                                                    
+                            <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" 
+                                  style="filter: brightness(calc(var(--unit-brightness-b) + .01))sepia(80%) hue-rotate(180deg) contrast(1.05);">
+                            <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: none;">
+                                                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" 
+                                  style="filter: brightness(calc(var(--unit-brightness-b) + .01))sepia(80%) hue-rotate(180deg) contrast(1.05);">
+                            <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: none;">
+                                                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" 
+                                  style="filter: brightness(calc(var(--unit-brightness-b) + .01))sepia(80%) hue-rotate(180deg) contrast(1.05);">
+                            <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: none;">
+                                                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" 
+                                  style="filter: brightness(calc(var(--unit-brightness-b) + .01))sepia(80%) hue-rotate(180deg) contrast(1.05);">  
+                    </div> -->
+
+                    <!-- <div class="units-container" style="display: flex; justify-content: space-around;
+                                                        height: calc(var(--unit-size) *1);
+                                                        background-color: var(--dark-color);
+                                                        border-bottom: 0rem solid var(--background-color);">                   
+
+                            
+                            <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" 
+                                  style="filter: brightness(calc(var(--unit-brightness-b) + .01))sepia(80%) hue-rotate(180deg) contrast(1.05);">
+                            <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: none;">
+                                                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" 
+                                  style="filter: brightness(calc(var(--unit-brightness-b) + .01))sepia(80%) hue-rotate(180deg) contrast(1.05);">
+                            <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: none;">
+                                                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" 
+                                  style="filter: brightness(calc(var(--unit-brightness-b) + .01))sepia(80%) hue-rotate(180deg) contrast(1.05);">
+                            <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: none;">
+                                                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" 
+                                  style="filter: brightness(calc(var(--unit-brightness-b) + .01))sepia(80%) hue-rotate(180deg) contrast(1.05);">  
+                            <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: none;">                                                                                                                                                                                                    
+                    </div> -->
+
+                    <!-- <div class="units-container" style="display: flex; justify-content: space-around;
+                                        height: calc(var(--unit-size) *1);
+                                        background-color: var(--dark-color);
+                                        border-bottom: 0rem solid var(--background-color);">                   
+                    
+                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                        <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: none;">
+                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                        <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: none;">
+                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                        <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: none;">
+                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">                         <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: none;">
+                                                                                                       
+                    </div> -->
+
+                    <!-- <div class="units-container" style="display: flex; justify-content: space-around;
+                                        height: calc(var(--unit-size) *1);
                                         background-color: var(--dark-color);
                                         border-bottom: .3rem solid var(--background-color);">                   
-                    
-                      <img src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(1.2);">
-                      <img src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(.6);">
-                      <img src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(1.2);">
-                      <img src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(.6);">
-                      <!-- <img src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(1.2);">
-                      <img src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(.6);">
-                      <img src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(1.2);">
-                      <img src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: brightness(.6);"> -->
-                    </div>
+
+                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                        <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: none;">
+                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                        <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: none;">
+                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                        <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: none;">
+                        <img class="villain-black" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                        <img class="villain-white" src="/assets/villain-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="filter: none;">                                                                                                  
+                    </div> -->
+
+
+
 
                     <div style="background-color: var(--dark-color); padding: .6rem;"></div>
           </div>
