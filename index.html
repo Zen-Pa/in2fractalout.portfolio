@@ -956,17 +956,18 @@
   </head>
         
         <body class="exponat-0" style="background-color: var(--dark-color);">
-          <article id="1bb171bf-a26d-8075-b127-e5853f0c626a" class="page sans exponat-1">
-            <div class="page-body exponat-2">
-              <div class="hero-container">
+          <article id="1bb171bf-a26d-8075-b127-e5853f0c626a" class="page sans">
+            <div class="page-body">
+              <div class="hero-container exponat-1">
+
+                <div class="" style="background-color: var(--dark-color);">
+                  <h1 class="hero-header exponat-3" style="position: relative; color: var(--hero-header-color); padding-top: 4rem; padding-bottom: 12rem;">
+                    ZEN<mark class="highlight-gray" style="color: var(--hero-second-header-color) !important;">DRAN</mark> PA<mark
+                      class="highlight-gray" style="color: var(--hero-second-header-color) !important;">VLO</mark></h1>
+                </div>
 
 
-                <h1 id="1bb171bf-a26d-8105-9840-ee80ee8975ba" class="hero-header" style="color: var(--hero-header-color); padding-top: 4rem; padding-bottom: 12rem;">
-                  ZEN<mark class="highlight-gray" style="color: var(--hero-second-header-color) !important;">DRAN</mark> PA<mark
-                    class="highlight-gray" style="color: var(--hero-second-header-color) !important;">VLO</mark></h1>
-
-                    <!-- <div style="width: 100%;"> -->
-                      <div>
+                      <div id="hero-units" class="exponat-2">
                         <div style="
                                   display: flex; 
                                   justify-content: space-evenly; 
@@ -991,30 +992,15 @@
                       </div>
                   <!-- </div> -->
 
-
-              <!-- <h1 id="1bb171bf-a26d-8105-9840-ee80ee8975ba" class="hero-header" style="color: var(--hero-second-header-color)">
-                ZEN<mark class="highlight-gray" style="color: var(--hero-header-color) !important;">DRAN</mark> PA<mark
-                  class="highlight-gray" style="color: var(--hero-header-color) !important;">VLO</mark></h1> -->
-                     
-                                    
-                                      <p style="line-height: 1.5em;">
-                                        <!-- #  -->
-                                        <!-- <br>  -->
-                                          <!-- Frontend solution: Design & Development. -->
-
-                                          <!-- <i>Bachelor of Graphic Design. Main field occupation - Gamedev 
-                                          <br>Am looking for a job - in a field of Interaction Design</i> -->
-
+  
+                                      <p class="exponat-4" style="line-height: 1.5em;">
                                           <i>Bachelor of Graphic Design, main field occupation - Gamedev 
                                           <br>Am looking for job - field Interaction Design</i>
-
-                                          <!-- B<i>achelor of Graphic Design. Main fiel occupation - Gamedev</i>
-                                          <br>A<i>m looking for a job - in a field of Interaction Design</i> -->
                                       </p>
                                       
-                                      <h3 id="-education-" class="cv-header">EDUCATION</h3>
+                                      <h3 id="-education-" class="cv-header exponat-5">EDUCATION</h3>
 
-                                      <div class="cv-block">
+                                      <div class="cv-block exponat-6">
                                         <p><strong>Ternopil Trade-Union of Arts ( 2005 - 2011 )</strong>
                                           <br>  Visual Arts</p>
 
@@ -1033,8 +1019,8 @@
                                       </div>
                                       
                                       
-                                      <h3 id="-experience-" class="cv-header">EXPERIENCE</h3>
-                                      <div class="cv-block">
+                                      <h3 id="-experience-" class="cv-header exponat-5">EXPERIENCE</h3>
+                                      <div class="cv-block exponat-6">
                                           <!-- <p><strong>Administrator - White Rabbit ( 2023 - ... )</strong>
                                           <br>    <em>PlayStation, Board game club</em>
 
@@ -1742,21 +1728,32 @@
           <style>
             .exponat-0, 
             .exponat-1, 
-            .exponat-2 {          
+            .exponat-2,
+            .exponat-3,
+            .exponat-4,
+            .exponat-5,
+            .exponat-6,
+            .exponat-7,
+            .exponat-8,
+            .exponat-9 {          
               opacity: 0; /* Initially hidden */
-              transform: translateY(20px);
+              /* transform: translateY(20px); */
               transition: opacity 0.5s ease-out, transform 0.5s ease-out;
             }
           
-            .exponat-0.expose, 
+            /* .exponat-0.expose, 
             .exponat-1.expose, 
-            .exponat-2.expose  {
+            .exponat-2.expose   */
+            .expose {
               opacity: 1;
               transform: translateY(0);
             }
           </style>
           
-          <script>
+
+
+          </body>
+          <script defer>
               // const boxes = document.querySelectorAll('.box');
               // const delays = [0, 2000, 4000]; // Exact trigger times (milliseconds)
     
@@ -1782,7 +1779,7 @@
 
 
               const exposition = ['.exponat-0', '.exponat-1', '.exponat-2'
-                                    // , '.exponat-3', '.exponat-4', '.exponat-5', '.exponat-6', '.exponat-7', '.exponat-8', '.exponat-9'
+                                    , '.exponat-3', '.exponat-4', '.exponat-5', '.exponat-6', '.exponat-7', '.exponat-8', '.exponat-9'
                                   ];
               var exponatDelay = 1000;
 
@@ -1796,10 +1793,9 @@
                   currentExponat.classList.add('expose');
                 }, exponatDelay);
 
-                exponatDelay = exponatDelay + 1000;
+                exponatDelay = exponatDelay + 600;
               });
 
           </script>
 
-          </body>
           </html>
