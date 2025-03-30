@@ -9,9 +9,10 @@
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Zen Pa</title><style>
-        /* cspell:disable-file */
-        /* webkit printing magic: print all background colors */
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+      <title>Zen Pa</title> 
+
+      <style>
         html {
           overflow-x: hidden;
           
@@ -88,7 +89,10 @@
         }
 
         .unit-white {
-          filter: sepia(0.3) brightness(1.17);
+          filter: sepia(0.3) 
+                  brightness(1.08)
+                  contrast(1.5)
+                  ;
           /* filter: brightness(1.2); */
           /* filter: saturate(80%); */
         }
@@ -948,12 +952,14 @@
           background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
         }
           
-        </style></head>
+      </style>
+  </head>
         
-        <body>
-          <article id="1bb171bf-a26d-8075-b127-e5853f0c626a" class="page sans">
-            <div class="page-body">
+        <body class="exponat-0" style="background-color: var(--dark-color);">
+          <article id="1bb171bf-a26d-8075-b127-e5853f0c626a" class="page sans exponat-1">
+            <div class="page-body exponat-2">
               <div class="hero-container">
+
 
                 <h1 id="1bb171bf-a26d-8105-9840-ee80ee8975ba" class="hero-header" style="color: var(--hero-header-color); padding-top: 4rem; padding-bottom: 12rem;">
                   ZEN<mark class="highlight-gray" style="color: var(--hero-second-header-color) !important;">DRAN</mark> PA<mark
@@ -1000,7 +1006,7 @@
                                           <br>Am looking for a job - in a field of Interaction Design</i> -->
 
                                           <i>Bachelor of Graphic Design, main field occupation - Gamedev 
-                                          <br>In look for a job - field Interaction Design</i>
+                                          <br>Am looking for job - field Interaction Design</i>
 
                                           <!-- B<i>achelor of Graphic Design. Main fiel occupation - Gamedev</i>
                                           <br>A<i>m looking for a job - in a field of Interaction Design</i> -->
@@ -1403,7 +1409,7 @@
           <p id="1bb171bf-a26d-8171-b6bd-d1c8761e8d33" class="">Item panel</p>
           <figure id="1bb171bf-a26d-819c-be89-fdc263a8a88d" class="image"><a href="Group_22.jpg"><img style="width:682px"
                 src="/assets/Group_22-5IEKJ-Nw.jpg" /></a></figure>
-          <p>Deck - tabs</p>
+          <p>Deck tabs</p>
           <div style=" margin-bottom: calc(var(--margin-vertical-l) *2) !important;
                       ">
             <figure id="1bb171bf-a26d-81ab-ad64-cf178fc8dd0f" class="image"><a href="Group_20.jpg"><img style="width:682px;"
@@ -1732,6 +1738,68 @@
           </div>
 
 
+
+          <style>
+            .exponat-0, 
+            .exponat-1, 
+            .exponat-2 {          
+              opacity: 0; /* Initially hidden */
+              transform: translateY(20px);
+              transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+            }
+          
+            .exponat-0.expose, 
+            .exponat-1.expose, 
+            .exponat-2.expose  {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          </style>
+          
+          <script>
+              // const boxes = document.querySelectorAll('.box');
+              // const delays = [0, 2000, 4000]; // Exact trigger times (milliseconds)
+    
+              // boxes.forEach((box, index) => {
+              //   setTimeout(() => {
+              //     box.classList.add('active');
+              //   }, delays[index]);
+              // });
+
+
+
+              // const exposition = document.querySelectorAll('.exponat-0');
+              // var exponatDelay = 1000;
+
+              // exposition.forEach((exponat, index) => {
+              //   setTimeout(() => {
+              //     exponat.classList.add('expose');
+              //   }, exponatDelay);
+
+              //   exponatDelay = exponatDelay + 1000;
+              // });
+
+
+
+              const exposition = ['.exponat-0', '.exponat-1', '.exponat-2'
+                                    // , '.exponat-3', '.exponat-4', '.exponat-5', '.exponat-6', '.exponat-7', '.exponat-8', '.exponat-9'
+                                  ];
+              var exponatDelay = 1000;
+
+              exposition.forEach((exponat, index) => {
+                
+
+                setTimeout(() => {
+                  var currentExponat = document.querySelector(exponat);
+                  console.log(currentExponat);
+                  // console.log(exponat);
+                  currentExponat.classList.add('expose');
+                }, exponatDelay);
+
+                exponatDelay = exponatDelay + 1000;
+              });
+
+          </script>
 
           </body>
           </html>
