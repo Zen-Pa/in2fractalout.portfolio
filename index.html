@@ -93,11 +93,15 @@
                   brightness(1.08)
                   contrast(1.5)
                   ;
+                  /* opacity: 0;
+                  transition: opacity 0.3s ease-out; */
           /* filter: brightness(1.2); */
           /* filter: saturate(80%); */
         }
         .unit-black {
-          filter: brightness(.57) contrast(1.57);
+          /* filter: brightness(.57) contrast(1.57);
+          opacity: 0;
+          transition: opacity 0.3s ease-out; */
         }
         .villain-white {
           filter: sepia(0.8) brightness(1.06);
@@ -955,7 +959,7 @@
       </style>
   </head>
         
-        <body class="exponat-0" style="background-color: var(--dark-color);">
+        <body class="exponat-0">
           <article id="1bb171bf-a26d-8075-b127-e5853f0c626a" class="page sans">
             <div class="page-body">
               <div class="hero-container exponat-1">
@@ -967,8 +971,10 @@
                 </div>
 
 
-                      <div id="hero-units" class="exponat-2">
-                        <div style="
+                      <div id="hero-units">
+                        <div id="hero-container"
+                              class="exponat-2" 
+                              style="
                                   display: flex; 
                                   justify-content: space-evenly; 
                                   height: var(--unit-size);
@@ -976,18 +982,17 @@
                                   position: relative; 
                                   bottom: var(--unit-size);
                                   
-
-                                  
                                   ">
 
-                          <img class="unit-white" src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
-                          <img class="unit-black" src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
-                          <img class="unit-white" src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
-                          <img class="unit-black" src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
-                          <img class="unit-white" src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
-                          <img class="unit-black" src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
-                          <img class="unit-white" src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
-                          <img class="unit-black" src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                          <img id="hero-imgXD"
+                               class="unit-white exponat-hero-unit" src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                          <img class="unit-black exponat-hero-unit" src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                          <img class="unit-white exponat-hero-unit" src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                          <img class="unit-black exponat-hero-unit" src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                          <img class="unit-white exponat-hero-unit" src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                          <img class="unit-black exponat-hero-unit" src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                          <img class="unit-white exponat-hero-unit" src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
+                          <img class="unit-black exponat-hero-unit" src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
                         </div>
                       </div>
                   <!-- </div> -->
@@ -1735,19 +1740,22 @@
             .exponat-6,
             .exponat-7,
             .exponat-8,
-            .exponat-9 {          
-              opacity: 0; /* Initially hidden */
-              /* transform: translateY(20px); */
+            .exponat-9 {   
+              /* Initially hidden */       
+              opacity: 1;
               transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+              /* transform: translateY(20px); */
             }
-          
-            /* .exponat-0.expose, 
-            .exponat-1.expose, 
-            .exponat-2.expose   */
+            .exponat-hero-unit {
+              opacity: 0;
+              transition: opacity 0.3s ease-out;
+            }
+
             .expose {
               opacity: 1;
               transform: translateY(0);
             }
+
           </style>
           
 
@@ -1778,24 +1786,103 @@
 
 
 
-              const exposition = ['.exponat-0', '.exponat-1', '.exponat-2'
-                                    , '.exponat-3', '.exponat-4', '.exponat-5', '.exponat-6', '.exponat-7', '.exponat-8', '.exponat-9'
-                                  ];
-              var exponatDelay = 1000;
+              // const exposition = ['.exponat-0', '.exponat-1', '.exponat-2'
+              //                       , '.exponat-3', '.exponat-4', '.exponat-5', '.exponat-6', '.exponat-7', '.exponat-8', '.exponat-9'
+              //                     ];
+              // var exponatDelay = 1000;
 
-              exposition.forEach((exponat, index) => {
-                
+              // exposition.forEach((exponat, index) => {
 
-                setTimeout(() => {
-                  var currentExponat = document.querySelector(exponat);
-                  console.log(currentExponat);
-                  // console.log(exponat);
-                  currentExponat.classList.add('expose');
-                }, exponatDelay);
+              //     var currentExponat = document.querySelector(exponat);
+              //           // console.log(currentExponat);
 
-                exponatDelay = exponatDelay + 600;
+              //     // animation common
+              //     if (currentExponat && !currentExponat.classList.contains('exponat-2')) {    
+              //           setTimeout(() => {
+              //             currentExponat.classList.add('expose');
+              //           }, exponatDelay);
+              //                 exponatDelay = exponatDelay + 600;
+                  
+              //     // animation custom - hero units
+              //     } else if (currentExponat && currentExponat.classList.contains('exponat-2')) {
+              //           const heroUnits = Array.from(currentExponat.children);
+              //           heroUnits.forEach(element => {
+              //             setTimeout(() => {
+              //               console.log('element 1: ');
+              //               console.log(element);
+              //               element.classList.add('expose');
+              //             }, exponatDelay);
+              //                   exponatDelay = exponatDelay + 100;
+              //           });
+              //     }
+              // });
+
+
+
+
+
+              document.addEventListener("DOMContentLoaded", function () {
+                const img = document.getElementById("hero-imgXD");
+
+                if (img.complete) {
+                  // ✅ Image is already loaded
+                  onImageLoad();
+                } else {
+                  // ✅ Wait for image to load
+                  img.addEventListener("load", onImageLoad);
+                  img.addEventListener("error", () => console.log("❌ Image failed to load"));
+                }
+
+                function onImageLoad() {
+                  console.log("✅ Image is fully loaded!");
+                  // Your script logic here
+              
+
+
+              //         const exposition = ['.exponat-0', '.exponat-1', '.exponat-2'
+              //                               , '.exponat-3', '.exponat-4', '.exponat-5', '.exponat-6', '.exponat-7', '.exponat-8', '.exponat-9'
+              //                             ];
+                      var exponatDelay = 1000;
+
+              //         exposition.forEach((exponat, index) => {
+
+              //             var currentExponat = document.querySelector(exponat);
+              //                   // console.log(currentExponat);
+
+              //             // animation common
+              //             if (currentExponat && !currentExponat.classList.contains('exponat-2')) {    
+              //                   setTimeout(() => {
+              //                     currentExponat.classList.add('expose');
+              //                   }, exponatDelay);
+              //                         exponatDelay = exponatDelay + 600;
+                          
+              //             // animation custom - hero units
+              //             } else if (currentExponat && currentExponat.classList.contains('exponat-2')) {
+                                const container = document.getElementById('hero-container');
+                                const heroUnits = Array.from(container.children);
+                                if (heroUnits) {
+                                  heroUnits.forEach(element => {
+                                    setTimeout(() => {
+                                      console.log('element 1: ');
+                                      console.log(element);
+                                      element.classList.add('expose');
+                                    }, exponatDelay);
+                                          exponatDelay = exponatDelay + 100;
+                                  });
+                                }
+              //             }
+              //         });   
+              
+              
+                }
               });
 
+
+
+
+
+
+              
           </script>
 
           </html>
