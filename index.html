@@ -99,8 +99,8 @@
           /* filter: saturate(80%); */
         }
         .unit-black {
-          /* filter: brightness(.57) contrast(1.57);
-          opacity: 0;
+          /* filter: brightness(.57) contrast(1.57); */
+          /* opacity: 0;
           transition: opacity 0.3s ease-out; */
         }
         .villain-white {
@@ -982,7 +982,8 @@
                                   position: relative; 
                                   bottom: var(--unit-size);
                                   
-                                  ">
+                                  "
+                          >
 
                           <img id="hero-imgXD"
                                class="unit-white exponat-hero-unit" src="/assets/hero-grey-ezgif.com-gif-to-webp-converter.webp" alt="" style="">
@@ -1006,21 +1007,23 @@
                                       <h3 id="-education-" class="cv-header exponat-5">EDUCATION</h3>
 
                                       <div class="cv-block exponat-6">
-                                        <p><strong>Ternopil Trade-Union of Arts ( 2005 - 2011 )</strong>
-                                          <br>  Visual Arts</p>
+                                        <div class="exponat-7">
+                                          <p><strong>Ternopil Trade-Union of Arts ( 2005 - 2011 )</strong>
+                                            <br>  Visual Arts</p>
 
-                                        <p><strong>Kyiv National University of Culture and Arts ( 2011 - 2015 )</strong>
-                                          <br>  Bachelor of Graphic Design</p>
-                                        
-                                        <p><strong>West Ukraine National University ( 2024 - … )</strong>
-                                          <br>  Master of Management</p>
+                                          <p><strong>Kyiv National University of Culture and Arts ( 2011 - 2015 )</strong>
+                                            <br>  Bachelor of Graphic Design</p>
+                                          
+                                          <p><strong>West Ukraine National University ( 2024 - … )</strong>
+                                            <br>  Master of Management</p>
 
-                                        <hr>
-                                        <p><strong>Devtodev Courses ( 2020 - 2021 )</strong>
-                                          <br>  Game Design
-                                          <br>  Game Design Documentation
-                                          <br>  Indie Game Development</p>
-                                          <br>
+                                          <hr>
+                                          <p><strong>Devtodev Courses ( 2020 - 2021 )</strong>
+                                            <br>  Game Design
+                                            <br>  Game Design Documentation
+                                            <br>  Indie Game Development</p>
+                                            <br>
+                                        </div>
                                       </div>
                                       
                                       
@@ -1527,7 +1530,7 @@
                             scale: 1.4;
                             ">
                     </div>
-
+                  </div>
 
 
 
@@ -1682,7 +1685,7 @@
 
                     <div style="background-color: var(--dark-color); padding: .6rem;"></div>
                   </div>
-        </div>
+        
 <!-- 
           </article>
           <div> <br><br><br><br> -->
@@ -1715,7 +1718,7 @@
             }
 
             .expose {
-              opacity: 1;
+              opacity: 1 !important;
               transform: translateY(0);
             }
 
@@ -1822,6 +1825,7 @@
                           // animation custom - hero units
                           } else if (currentExponat && currentExponat.classList.contains('exponat-2')) {
                                 const container = document.getElementById('hero-container');
+                                  container.style.opacity = '1';
                                 const heroUnits = Array.from(container.children);
                                 if (heroUnits) {
                                   heroUnits.forEach(element => {
