@@ -1020,10 +1020,6 @@
 
                                       
                                       <h3 id="-education-" class="hero-units-overlay cv-header exponat-5"
-                                          style="position: relative;
-                                                  background-color: wheat;
-                                                  z-index: 1 !important;
-                                                  "
                                       >EDUCATION</h3>
 
                                       <div class="cv-block exponat-6">
@@ -1732,6 +1728,139 @@
               transition: opacity 0.5s ease-out, transform 0.5s ease-out;
               /* transform: translateY(20px); */
             }
+            .exponat-3 {
+
+            }
+            .flicker-in-2 {
+              animation: flicker-in-2 2s linear both;
+            }
+            @keyframes flicker-in-2 {
+              0% {
+                opacity: 0;
+              }
+              10% {
+                opacity: 0;
+                box-shadow: none;
+              }
+              10.1% {
+                opacity: 1;
+                box-shadow: none;
+              }
+              10.2% {
+                opacity: 0;
+                box-shadow: none;
+              }
+              20% {
+                opacity: 0;
+                box-shadow: none;
+              }
+              20.1% {
+                opacity: 1;
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.25);
+              }
+              20.6% {
+                opacity: 0;
+                box-shadow: none;
+              }
+              30% {
+                opacity: 0;
+                box-shadow: none;
+              }
+              30.1% {
+                opacity: 1;
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+              }
+              30.5% {
+                opacity: 1;
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+              }
+              30.6% {
+                opacity: 0;
+                box-shadow: none;
+              }
+              45% {
+                opacity: 0;
+                box-shadow: none;
+              }
+              45.1% {
+                opacity: 1;
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+              }
+              50% {
+                opacity: 1;
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+              }
+              55% {
+                opacity: 1;
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.45), 0 0 60px rgba(255, 255, 255, 0.25);
+              }
+              55.1% {
+                opacity: 0;
+                box-shadow: none;
+              }
+              57% {
+                opacity: 0;
+                box-shadow: none;
+              }
+              57.1% {
+                opacity: 1;
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.3);
+              }
+              60% {
+                opacity: 1;
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.3);
+              }
+              60.1% {
+                opacity: 0;
+                box-shadow: none;
+              }
+              65% {
+                opacity: 0;
+                box-shadow: none;
+              }
+              65.1% {
+                opacity: 1;
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.3), 0 0 100px rgba(255, 255, 255, 0.1);
+              }
+              75% {
+                opacity: 1;
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.55), 0 0 60px rgba(255, 255, 255, 0.3), 0 0 100px rgba(255, 255, 255, 0.1);
+              }
+              75.1% {
+                opacity: 0;
+                box-shadow: none;
+              }
+              77% {
+                opacity: 0;
+                box-shadow: none;
+              }
+              77.1% {
+                opacity: 1;
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+              }
+              85% {
+                opacity: 1;
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.4), 0 0 110px rgba(255, 255, 255, 0.2), 0 0 100px rgba(255, 255, 255, 0.1);
+              }
+              85.1% {
+                opacity: 0;
+                box-shadow: none;
+              }
+              86% {
+                opacity: 0;
+                box-shadow: none;
+              }
+              86.1% {
+                opacity: 1;
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+              }
+              100% {
+                opacity: 1;
+                box-shadow: 0 0 30px rgba(255, 255, 255, 0.6), 0 0 60px rgba(255, 255, 255, 0.45), 0 0 110px rgba(255, 255, 255, 0.25), 0 0 100px rgba(255, 255, 255, 0.1);
+              }
+            }
+
+
             .exponat-hero-unit {
               opacity: 0;
               
@@ -1877,28 +2006,56 @@
                                 // console.log(currentExponat);
 
                           // animation common
-                          if (currentExponat && !currentExponat.classList.contains('exponat-2')) {    
+                          if (currentExponat && !currentExponat.classList.contains('exponat-2') && !currentExponat.classList.contains('exponat-3')) {    
                                 setTimeout(() => {
                                   currentExponat.classList.add('expose');
                                 }, exponatDelay);
                                       exponatDelay = exponatDelay + 600;
                           
-                          // animation custom - hero units
-                          } else if (currentExponat && currentExponat.classList.contains('exponat-2')) {
+                          
+                          } // animation units
+                           else if (currentExponat && currentExponat.classList.contains('exponat-2')) {
                                 const container = document.getElementById('hero-container');
                                   container.style.opacity = '1';
                                 const heroUnits = Array.from(container.children);
                                 if (heroUnits) {
-                                  heroUnits.forEach(element => {
-                                    setTimeout(() => {
-                                      console.log('element 1: ');
-                                      console.log(element);
-                                      element.classList.add('hero-expose');
-                                      element.style.opacity = '1';
-                                    }, exponatDelay);
-                                          exponatDelay = exponatDelay + 100;
+                                  heroUnits.forEach((element, index, array) => {
+                                    if (index === 0) {
+                                      setTimeout(() => {
+                                            element.classList.add('hero-expose');
+                                            element.style.opacity = '1';
+                                            element.style.animation = 'jumpedUp .24s ease-out';
+                                          }, exponatDelay);
+                                                exponatDelay = exponatDelay + 100;
+                                    } 
+                                    if (index === array.length -1) {
+                                        setTimeout(() => {
+                                            // console.log('element 1: ');
+                                            // console.log(element);
+                                            element.classList.add('hero-expose');
+                                            element.style.opacity = '1';
+                                            element.style.animation = 'jumpedUp 2.24s ease-out';
+                                          }, exponatDelay);
+                                                exponatDelay = exponatDelay + 2500;
+                                    } else {
+                                        setTimeout(() => {
+                                            console.log('element 1: ');
+                                            console.log(element);
+                                            element.classList.add('hero-expose');
+                                            element.style.opacity = '1';
+                                          }, exponatDelay);
+                                                exponatDelay = exponatDelay + 100;
+                                    }
                                   });
                                 }
+
+                          
+                          } // animation title
+                          else if (currentExponat && currentExponat.classList.contains('exponat-3')){
+                                setTimeout(() => {
+                                      currentExponat.classList.add('flicker-in-2');
+                                    }, exponatDelay);
+                                          exponatDelay = exponatDelay + 3000;
                           }
                       });   
               
