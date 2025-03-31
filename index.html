@@ -195,7 +195,7 @@
           top: .48rem;
         }
         
-        .hero-container {
+        .page-header-cv {
           /* background-color: var(--dark-color); */
           /* background-color: rgba(208, 223, 92, 1); */
         
@@ -962,7 +962,7 @@
         <body class="exponat-0">
           <article id="1bb171bf-a26d-8075-b127-e5853f0c626a" class="page sans" style="background-color: var(--dark-color);">
 
-              <div class="hero-container exponat-1">
+              <div class="page-header-cv exponat-1">
 
                 <div class="" style="background-color: var(--dark-color);">
                   <h1 class="hero-header exponat-3" style="position: relative; color: var(--hero-header-color); padding-top: 4rem; padding-bottom: 12rem;">
@@ -1714,7 +1714,28 @@
             }
             .exponat-hero-unit {
               opacity: 0;
-              transition: opacity 0.3s ease-out;
+              /* transition: opacity 0.3s ease-out; */
+            /* } */
+              /* position: relative; */
+              
+            }
+            .hero-expose {
+              animation: jumpedUp .4s ease-in;
+            }
+            
+
+            @keyframes jumpedUp {
+              0% {
+                transform: translateY(2rem);
+                opacity: 0;
+              }
+              80% {
+                transform: translateY(-1rem); /* Move slightly above the final position */
+              }
+              100% {
+                opacity: 1;
+                transform: translateY(0); /* Settle at the final position */
+              }
             }
 
             .expose {
@@ -1832,7 +1853,8 @@
                                     setTimeout(() => {
                                       console.log('element 1: ');
                                       console.log(element);
-                                      element.classList.add('expose');
+                                      element.classList.add('hero-expose');
+                                      element.style.opacity = '1';
                                     }, exponatDelay);
                                           exponatDelay = exponatDelay + 100;
                                   });
