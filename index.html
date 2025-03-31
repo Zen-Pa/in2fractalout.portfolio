@@ -1714,8 +1714,12 @@
 
           <style>
             .exponat-0
-            ,.exponat-1
-            ,.exponat-2
+            ,.exponat-1 {
+              opacity: 0;
+              transition: opacity .8s ease-out;
+            }
+            
+            .exponat-2
             ,.exponat-3
             /* ,.exponat-5
             ,.exponat-6
@@ -1724,18 +1728,25 @@
             ,.exponat-9  */
             {        
               opacity: 0;
-              transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+              transition: opacity 1s ease-out, transform 0.5s ease-out;
             }
-            .exponat-4 {
-              
+            .exponat-4 { 
+              opacity: 0;
+              transform: translateX(-2rem);
+              transition: opacity 2.4s ease-in, transform 2s ease-out;
             }
             .exponat-6{
               opacity: 0;
               transition: opacity .6s ease-out;
             }
-            .exponat-4
-            ,.exponat-5
-            ,.exponat-7
+            
+            .exponat-5 {
+              opacity: 0;
+              transform: translateX(-2rem);
+              transition: opacity 2.4s ease-out, transform 1.6s ease-out;
+            }
+
+            .exponat-7
             ,.exponat-8
             ,.exponat-9 {
               /* position: relative;
@@ -1743,7 +1754,7 @@
               /* overflow: visible; */
               opacity: 0;
               transform: translateX(-12rem);
-              transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+              transition: opacity 2.4s ease-out, transform 1.6s ease-out;
             }
 
             /* .exponat-1 {
@@ -2037,7 +2048,7 @@
                                 setTimeout(() => {
                                   currentExponat.classList.add('expose');
                                 }, exponatDelay);
-                                      exponatDelay = exponatDelay + 400;
+                                      exponatDelay = exponatDelay + 500;
                           
                           
                           } // animation units
@@ -2052,8 +2063,8 @@
                                             element.classList.add('hero-expose');
                                             element.style.opacity = '1';
                                             element.style.animation = 'jumpedUp .24s ease-out';
-                                          }, exponatDelay);
-                                                exponatDelay = exponatDelay + 200;
+                                          }, exponatDelay);                    // the boy ----------------
+                                                exponatDelay = exponatDelay + 1;
                                     } 
                                     if (index === array.length -1) {
                                         setTimeout(() => {
@@ -2082,7 +2093,7 @@
                                 setTimeout(() => {
                                       currentExponat.classList.add('flicker-in-2');
                                     }, exponatDelay);                     // resume
-                                          exponatDelay = exponatDelay + 3300; // 10X ----------------------------------
+                                          exponatDelay = exponatDelay + 1900; // 10X ----------------------------------
                           } // animation resume
                           // else if (currentExponat && currentExponat.classList.contains('exponat-4')){
                           //   setTimeout(() => {
@@ -2098,7 +2109,8 @@
                                               // , '.exponat-7'
                                               // , '.exponat-8', '.exponat-9'
                                           ];
-                      var exponatDelay1 = exponatDelay + 1200;
+                                                          // cv blocks
+                      var exponatDelay1 = exponatDelay + 1400; // 10X ---------------------------------------------------------
 
                       exposition1.forEach(exponat => {
                         // console.log(exponat);
