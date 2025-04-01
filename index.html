@@ -1728,7 +1728,7 @@
             ,.exponat-9  */
             {        
               opacity: 0;
-              transition: opacity 1s ease-out, transform 0.5s ease-out;
+              transition: opacity 1s ease--inout, transform 0.5s ease-in-out;
             }
             .anim-exponat-4-resume { 
               opacity: 0;
@@ -2037,10 +2037,29 @@
               
 
 
-                      const exposition = ['.anim-exponat-0-bg-page', '.anim-exponat-1-bg-cv', '.anim-exponat-2-units', '.anim-exponat-3-title', '.anim-exponat-4-resume'
-                                            // , '.anim-exponat-6-cv-h3', '.anim-exponat-5-cv-block', '.anim-exponat-7-cv-sub-block', '.exponat-8', '.exponat-9'
+                      const exposition = ['.anim-exponat-2-units', '.anim-exponat-3-title', '.anim-exponat-4-resume'
                                           ];
                       var exponatDelay = 1000;
+
+                // exposition 0
+                      setTimeout(() => {
+                          // document.querySelector('.anim-exponat-0-bg-page').classList.add('expose');
+                          document
+                          .querySelector('.anim-exponat-0-bg-page')
+                          .classList
+                          .add('expose');
+                      }, exponatDelay);
+                            exponatDelay += 500;
+
+                      setTimeout(() => {
+                          // document.querySelector('.anim-exponat-0-bg-page').classList.add('expose');
+                          document
+                          .querySelector('.anim-exponat-1-bg-cv')
+                          .classList
+                          .add('expose');
+                      }, exponatDelay);
+                            exponatDelay += 200;
+
 
                 // exposition
                       exposition.forEach((exponat, index) => {
@@ -2048,16 +2067,21 @@
                           var currentExponat = document.querySelector(exponat);
                                 // console.log(currentExponat);
 
-                          // animation common
+                      // animation common
                           if (currentExponat && !currentExponat.classList.contains('anim-exponat-2-units') && !currentExponat.classList.contains('anim-exponat-3-title')) {    
                                 setTimeout(() => {
                                   currentExponat.classList.add('expose');
                                 }, exponatDelay);
                                       exponatDelay = exponatDelay + 500;
-                          
-                          
-                          } // animation units
-                           else if (currentExponat && currentExponat.classList.contains('anim-exponat-2-units')) {
+                          } 
+
+
+
+
+
+                          // animation units
+                           else 
+                           if (currentExponat && currentExponat.classList.contains('anim-exponat-2-units')) {
                                 const container = document.getElementById('hero-container');
                                   container.style.opacity = '1';
                                 const heroUnits = Array.from(container.children);
@@ -2098,7 +2122,7 @@
                                 setTimeout(() => {
                                       currentExponat.classList.add('flicker-in-2');
                                     }, exponatDelay);                     // resume
-                                          exponatDelay = exponatDelay + 2000; // 10X ----------------------------------
+                                          exponatDelay = exponatDelay + 1600; // 10X ----------------------------------
                           } // animation resume
                           // else if (currentExponat && currentExponat.classList.contains('anim-exponat-4-resume')){
                           //   setTimeout(() => {
@@ -2113,7 +2137,7 @@
                       const exposition1a = ['.anim-exponat-6-cv-h3', '.anim-exponat-5-cv-block'
                                           ];
                                                           // cv blocks
-                      var exponatDelay1 = exponatDelay + 1400; // 10X ---------------------------------------------------------
+                      var exponatDelay1 = exponatDelay + 600; // 10X ---------------------------------------------------------
 
                     // exposition cv block
                         const currentExpositionCvBlock = Array.from(document.querySelectorAll('.anim-exponat-5-cv-block'));
