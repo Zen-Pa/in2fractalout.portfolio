@@ -1737,7 +1737,7 @@
             }
             .anim-exponat-5-cv-block{
               opacity: 0;
-              transition: opacity .6s ease-out;
+              transition: opacity 2.4s ease-out;
             }
             
             .anim-exponat-6-cv-h3 {
@@ -1749,7 +1749,7 @@
             .anim-exponat-7-cv-sub-block {
               opacity: 0;
               transform: translateX(-12rem);
-              transition: opacity 3s ease-out, transform 2.2s ease-out;
+              transition: opacity 5s ease-out, transform 1.6s ease-out;
             }
             
             .exponat-8
@@ -2079,7 +2079,7 @@
                                             element.style.opacity = '1';
                                             element.style.animation = 'jumpedUp 2.24s ease-out';
                                           }, exponatDelay);                     // TITLE
-                                                exponatDelay = exponatDelay + 210; // 10X ----------------------------------
+                                                exponatDelay = exponatDelay + 2100; // 10X ----------------------------------
                                     } else {
                                         setTimeout(() => {
                                             // console.log('element 1: ');
@@ -2098,7 +2098,7 @@
                                 setTimeout(() => {
                                       currentExponat.classList.add('flicker-in-2');
                                     }, exponatDelay);                     // resume
-                                          exponatDelay = exponatDelay + 200; // 10X ----------------------------------
+                                          exponatDelay = exponatDelay + 2000; // 10X ----------------------------------
                           } // animation resume
                           // else if (currentExponat && currentExponat.classList.contains('anim-exponat-4-resume')){
                           //   setTimeout(() => {
@@ -2110,18 +2110,15 @@
                       
 
                 // exposition1
-                      const exposition1 = ['.anim-exponat-6-cv-h3', '.anim-exponat-5-cv-block'
+                      const exposition1a = ['.anim-exponat-6-cv-h3', '.anim-exponat-5-cv-block'
                                           ];
                                                           // cv blocks
-                      var exponatDelay1 = exponatDelay + 140; // 10X ---------------------------------------------------------
+                      var exponatDelay1 = exponatDelay + 1400; // 10X ---------------------------------------------------------
 
-                      exposition1.forEach(exponat => {
-                        // console.log(exponat);
-                        const currentExposition = Array.from(document.querySelectorAll(exponat));
-                        // console.log(currentExposition);
-                        
-                        
-                        currentExposition.forEach(element => {
+                    // exposition cv block
+                        const currentExpositionCvBlock = Array.from(document.querySelectorAll('.anim-exponat-5-cv-block'));
+
+                        currentExpositionCvBlock.forEach(element => {
                             // console.log(element);
                             element.style.animation = 'none';
 
@@ -2130,10 +2127,43 @@
                             }, exponatDelay1);
                             exponatDelay1 += 100;
 
+                              // // Array.from(element.children).forEach(cvSubBlock => {
+                              // const cvSubBlocks = Array.from(element.querySelectorAll('*'));
+                              // cvSubBlocks.forEach(cvSubBlock => {
+                              //   cvSubBlock.style.opacity = '0';
+                              //   cvSubBlock.style.animation = 'none';
+                              //   cvSubBlock.classList.add('anim-exponat-7-cv-sub-block');
+                                
+                              //   setTimeout(() => {
+                              //     console.log(cvSubBlock);
+                              //     cvSubBlock.classList.add('expose');
+                              //   }, exponatDelay1);
+                              //         exponatDelay1 += 100;
+                                
+                                
+                              // })
+                        });
 
-                            // if (exponat.classList.contains('anim-exponat-5-cv-block')) {
-                            if (exponat === '.anim-exponat-5-cv-block') {
-                              // Array.from(element.children).forEach(cvSubBlock => {
+                    // exposition cv h3
+                        const currentExpositionCvH3 = Array.from(document.querySelectorAll('.anim-exponat-6-cv-h3'));
+                        // console.log(currentExpositionCvH3);
+                        
+                        
+
+                        currentExpositionCvH3.forEach(element => {
+                            // console.log(element);
+                            element.style.animation = 'none';
+
+                            setTimeout(() => {
+                              element.classList.add('expose');
+                            }, exponatDelay1);
+                            exponatDelay1 += 300;
+
+                        });
+
+                    // cv sub block
+                            currentExpositionCvBlock.forEach(element => {
+
                                 const cvSubBlocks = Array.from(element.querySelectorAll('*'));
                                 cvSubBlocks.forEach(cvSubBlock => {
                                   cvSubBlock.style.opacity = '0';
@@ -2144,17 +2174,12 @@
                                     console.log(cvSubBlock);
                                     cvSubBlock.classList.add('expose');
                                   }, exponatDelay1);
-                                        exponatDelay1 += 100;
+                                        exponatDelay1 += 77;
                                   
                                   
                                 })
-                              };
-
-                        });
+                            });
                         
-
-
-                      });
               
               
                 }
