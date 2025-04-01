@@ -963,13 +963,13 @@
       </style>
   </head>
         
-        <body class="exponat-0">
+        <body class="anim-exponat-0-bg-page">
           <article id="1bb171bf-a26d-8075-b127-e5853f0c626a" class="page sans" style="background-color: var(--dark-color);">
 
-              <div class="page-header-cv exponat-1">
+              <div class="page-header-cv anim-exponat-1-bg-cv">
 
                 <div class="" style="background-color: var(--dark-color);">
-                  <h1 class="hero-header exponat-3" style="position: relative; color: var(--hero-header-color); padding-top: 4rem; padding-bottom: 12rem;">
+                  <h1 class="hero-header anim-exponat-3-title" style="position: relative; color: var(--hero-header-color); padding-top: 4rem; padding-bottom: 12rem;">
                     ZEN<mark class="highlight-gray" style="color: var(--hero-second-header-color) !important;">DRAN</mark> PA<mark
                       class="highlight-gray" style="color: var(--hero-second-header-color) !important;">VLO</mark></h1>
                 </div>
@@ -978,7 +978,7 @@
                       <div id="hero-units" style="height: 0px;">
                         
                         <div id="hero-container"
-                              class="exponat-2" 
+                              class="anim-exponat-2-units" 
                               style="
                                   display: flex; 
                                   justify-content: space-evenly; 
@@ -1007,7 +1007,7 @@
                         <div class="hero-units-overlay" style="background-color: wheat; position: relative; z-index: 1 !important; height: var(--unit-size);"></div>
                                       
                                       <div class="hero-units-overlay" style="background-color: wheat; position: relative; z-index: 1;">
-                                        <p class="exponat-4" style="margin-left: 0; padding-left: var(--margin-m); 
+                                        <p class="anim-exponat-4-resume" style="margin-left: 0; padding-left: var(--margin-m); 
                                                                     margin-top: 0; padding-top: var(--margin-vertical-s);
 
                                                                     line-height: 1.5em; 
@@ -1019,11 +1019,11 @@
 
 
                                       
-                                      <h3 id="-education-" class="hero-units-overlay cv-header exponat-5"
+                                      <h3 id="-education-" class="hero-units-overlay cv-header anim-exponat-6-cv-h3"
                                       >EDUCATION</h3>
 
-                                      <div class="cv-block exponat-6">
-                                        <!-- <div class="exponat-7"> -->
+                                      <div class="cv-block anim-exponat-5-cv-block">
+                                        <!-- <div class="anim-exponat-7-cv-sub-block"> -->
                                           <p><strong>Ternopil Trade-Union of Arts ( 2005 - 2011 )</strong>
                                             <br>  Visual Arts</p>
 
@@ -1043,8 +1043,8 @@
                                       </div>
                                       
                                       
-                                      <h3 id="-experience-" class="cv-header exponat-5">EXPERIENCE</h3>
-                                      <div class="cv-block exponat-6">
+                                      <h3 id="-experience-" class="cv-header anim-exponat-6-cv-h3">EXPERIENCE</h3>
+                                      <div class="cv-block anim-exponat-5-cv-block">
                                           <!-- <p><strong>Administrator - White Rabbit ( 2023 - ... )</strong>
                                           <br>    <em>PlayStation, Board game club</em>
 
@@ -1092,8 +1092,8 @@
                                         <br>
                                       </div>                                      
                                       
-                                      <h3 id="-skill-" class="cv-header exponat-5">SKILL</h3>
-                                      <div class="cv-block exponat-6" style="display: flex; gap: 2rem;">
+                                      <h3 id="-skill-" class="cv-header anim-exponat-6-cv-h3">SKILL</h3>
+                                      <div class="cv-block anim-exponat-5-cv-block" style="display: flex; gap: 2rem;">
                                         <div class="cv-sub-block">
                                           <p><strong>Design</strong></p>
                                           <ul>
@@ -1124,8 +1124,8 @@
                                       </div>
                                       
                                       
-                                      <h3 id="-tool-" class="cv-header exponat-5">TOOL</h3>
-                                      <div class="cv-block exponat-6" style="display: flex; gap: 2rem; margin-bottom: calc(var(--margin-vertical-l) *3);">
+                                      <h3 id="-tool-" class="cv-header anim-exponat-6-cv-h3">TOOL</h3>
+                                      <div class="cv-block anim-exponat-5-cv-block" style="display: flex; gap: 2rem; margin-bottom: calc(var(--margin-vertical-l) *3);">
                                         <div class="cv-sub-block">
                                           <p><strong>Engine</strong></p>
                                           <ul>
@@ -1713,41 +1713,46 @@
 
 
           <style>
-            .exponat-0
-            ,.exponat-1 {
+            .anim-exponat-0-bg-page
+            ,.anim-exponat-1-bg-cv {
               opacity: 0;
               transition: opacity .8s ease-out;
             }
             
-            .exponat-2
-            ,.exponat-3
-            /* ,.exponat-5
-            ,.exponat-6
-            ,.exponat-7
+            .anim-exponat-2-units
+            ,.anim-exponat-3-title
+            /* ,.anim-exponat-6-cv-h3
+            ,.anim-exponat-5-cv-block
+            ,.anim-exponat-7-cv-sub-block
             ,.exponat-8
             ,.exponat-9  */
             {        
               opacity: 0;
               transition: opacity 1s ease-out, transform 0.5s ease-out;
             }
-            .exponat-4 { 
+            .anim-exponat-4-resume { 
               opacity: 0;
               transform: translateX(-2rem);
               transition: opacity 2.4s ease-in, transform 2s ease-out;
             }
-            .exponat-6{
+            .anim-exponat-5-cv-block{
               opacity: 0;
               transition: opacity .6s ease-out;
             }
             
-            .exponat-5 {
+            .anim-exponat-6-cv-h3 {
               opacity: 0;
               transform: translateX(-2rem);
               transition: opacity 2.4s ease-out, transform 1.6s ease-out;
             }
 
-            .exponat-7
-            ,.exponat-8
+            .anim-exponat-7-cv-sub-block {
+              opacity: 0;
+              transform: translateX(-12rem);
+              transition: opacity 3s ease-out, transform 2.2s ease-out;
+            }
+            
+            .exponat-8
             ,.exponat-9 {
               /* position: relative;
               z-index: 1 !important; */
@@ -1757,14 +1762,14 @@
               transition: opacity 2.4s ease-out, transform 1.6s ease-out;
             }
 
-            /* .exponat-1 {
+            /* .anim-exponat-1-bg-cv {
               opacity: 0;
               position: relative;
               transform: translateY(4rem);
               transition: opacity .4s ease-out, transform .4s ease-out;
             } */
 
-            .exponat-3 {
+            .anim-exponat-3-title {
 
             }
             .flicker-in-2 {
@@ -1966,7 +1971,7 @@
 
 
 
-              // const exposition = document.querySelectorAll('.exponat-0');
+              // const exposition = document.querySelectorAll('.anim-exponat-0-bg-page');
               // var exponatDelay = 1000;
 
               // exposition.forEach((exponat, index) => {
@@ -1979,8 +1984,8 @@
 
 
 
-              // const exposition = ['.exponat-0', '.exponat-1', '.exponat-2'
-              //                       , '.exponat-3', '.exponat-4', '.exponat-5', '.exponat-6', '.exponat-7', '.exponat-8', '.exponat-9'
+              // const exposition = ['.anim-exponat-0-bg-page', '.anim-exponat-1-bg-cv', '.anim-exponat-2-units'
+              //                       , '.anim-exponat-3-title', '.anim-exponat-4-resume', '.anim-exponat-6-cv-h3', '.anim-exponat-5-cv-block', '.anim-exponat-7-cv-sub-block', '.exponat-8', '.exponat-9'
               //                     ];
               // var exponatDelay = 1000;
 
@@ -1990,14 +1995,14 @@
               //           // console.log(currentExponat);
 
               //     // animation common
-              //     if (currentExponat && !currentExponat.classList.contains('exponat-2')) {    
+              //     if (currentExponat && !currentExponat.classList.contains('anim-exponat-2-units')) {    
               //           setTimeout(() => {
               //             currentExponat.classList.add('expose');
               //           }, exponatDelay);
               //                 exponatDelay = exponatDelay + 600;
                   
               //     // animation custom - hero units
-              //     } else if (currentExponat && currentExponat.classList.contains('exponat-2')) {
+              //     } else if (currentExponat && currentExponat.classList.contains('anim-exponat-2-units')) {
               //           const heroUnits = Array.from(currentExponat.children);
               //           heroUnits.forEach(element => {
               //             setTimeout(() => {
@@ -2032,8 +2037,8 @@
               
 
 
-                      const exposition = ['.exponat-0', '.exponat-1', '.exponat-2', '.exponat-3', '.exponat-4'
-                                            // , '.exponat-5', '.exponat-6', '.exponat-7', '.exponat-8', '.exponat-9'
+                      const exposition = ['.anim-exponat-0-bg-page', '.anim-exponat-1-bg-cv', '.anim-exponat-2-units', '.anim-exponat-3-title', '.anim-exponat-4-resume'
+                                            // , '.anim-exponat-6-cv-h3', '.anim-exponat-5-cv-block', '.anim-exponat-7-cv-sub-block', '.exponat-8', '.exponat-9'
                                           ];
                       var exponatDelay = 1000;
 
@@ -2044,7 +2049,7 @@
                                 // console.log(currentExponat);
 
                           // animation common
-                          if (currentExponat && !currentExponat.classList.contains('exponat-2') && !currentExponat.classList.contains('exponat-3')) {    
+                          if (currentExponat && !currentExponat.classList.contains('anim-exponat-2-units') && !currentExponat.classList.contains('anim-exponat-3-title')) {    
                                 setTimeout(() => {
                                   currentExponat.classList.add('expose');
                                 }, exponatDelay);
@@ -2052,7 +2057,7 @@
                           
                           
                           } // animation units
-                           else if (currentExponat && currentExponat.classList.contains('exponat-2')) {
+                           else if (currentExponat && currentExponat.classList.contains('anim-exponat-2-units')) {
                                 const container = document.getElementById('hero-container');
                                   container.style.opacity = '1';
                                 const heroUnits = Array.from(container.children);
@@ -2074,7 +2079,7 @@
                                             element.style.opacity = '1';
                                             element.style.animation = 'jumpedUp 2.24s ease-out';
                                           }, exponatDelay);                     // TITLE
-                                                exponatDelay = exponatDelay + 2200; // 10X ----------------------------------
+                                                exponatDelay = exponatDelay + 210; // 10X ----------------------------------
                                     } else {
                                         setTimeout(() => {
                                             // console.log('element 1: ');
@@ -2089,13 +2094,13 @@
 
                           
                           } // animation title
-                          else if (currentExponat && currentExponat.classList.contains('exponat-3')){
+                          else if (currentExponat && currentExponat.classList.contains('anim-exponat-3-title')){
                                 setTimeout(() => {
                                       currentExponat.classList.add('flicker-in-2');
                                     }, exponatDelay);                     // resume
-                                          exponatDelay = exponatDelay + 1900; // 10X ----------------------------------
+                                          exponatDelay = exponatDelay + 200; // 10X ----------------------------------
                           } // animation resume
-                          // else if (currentExponat && currentExponat.classList.contains('exponat-4')){
+                          // else if (currentExponat && currentExponat.classList.contains('anim-exponat-4-resume')){
                           //   setTimeout(() => {
                           //             currentExponat.classList.add('expose');
                           //           }, exponatDelay);
@@ -2105,17 +2110,16 @@
                       
 
                 // exposition1
-                      const exposition1 = ['.exponat-5', '.exponat-6'
-                                              // , '.exponat-7'
-                                              // , '.exponat-8', '.exponat-9'
+                      const exposition1 = ['.anim-exponat-6-cv-h3', '.anim-exponat-5-cv-block'
                                           ];
                                                           // cv blocks
-                      var exponatDelay1 = exponatDelay + 1400; // 10X ---------------------------------------------------------
+                      var exponatDelay1 = exponatDelay + 140; // 10X ---------------------------------------------------------
 
                       exposition1.forEach(exponat => {
                         // console.log(exponat);
                         const currentExposition = Array.from(document.querySelectorAll(exponat));
                         // console.log(currentExposition);
+                        
                         
                         currentExposition.forEach(element => {
                             // console.log(element);
@@ -2127,24 +2131,24 @@
                             exponatDelay1 += 100;
 
 
-                            // if (exponat.classList.contains('exponat-6')) {
-                            if (exponat === '.exponat-6') {
+                            // if (exponat.classList.contains('anim-exponat-5-cv-block')) {
+                            if (exponat === '.anim-exponat-5-cv-block') {
                               // Array.from(element.children).forEach(cvSubBlock => {
                                 const cvSubBlocks = Array.from(element.querySelectorAll('*'));
                                 cvSubBlocks.forEach(cvSubBlock => {
                                   cvSubBlock.style.opacity = '0';
-                                  cvSubBlock.classList.add('exponat-5');
                                   cvSubBlock.style.animation = 'none';
+                                  cvSubBlock.classList.add('anim-exponat-7-cv-sub-block');
                                   
                                   setTimeout(() => {
                                     console.log(cvSubBlock);
                                     cvSubBlock.classList.add('expose');
-                                }, exponatDelay1);
-                                      exponatDelay1 += 100;
-                              }
-                                
-                              )
-                            }
+                                  }, exponatDelay1);
+                                        exponatDelay1 += 100;
+                                  
+                                  
+                                })
+                              };
 
                         });
                         
